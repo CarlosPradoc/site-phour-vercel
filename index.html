@@ -1,44 +1,109 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>trivia</title>
-  </head>
+    <head>
+        <title>PH Ourives</title>
+    </head>
+<body>
+    <link rel="stylesheet" href="style.css" >
+    
+    <div id="icon-link"><img src="https://i.ibb.co/dDRPv0Y/PHICON-2.png"></div>
 
-  <body>
-    <link rel="stylesheet" href="index.css">
+    <input type="checkbox" id="bt_menu">
+    <label for="bt_menu"><img src="https://www.flaticon.com/svg/static/icons/svg/36/36775.svg"></label><!-- <label for="bt_menu">&#9776;</label> -->
 
-    <script>
-    var questionNumber = 0;
-    var questions = [
-      {question: 'What does www stand for in a website browser?', answer: 'World Wide Web'},
-      {question: 'How long is an Olympic swimming pool (in meters)?', answer: '50 meters'},
-      {question: 'What is "cynophobia"?', answer: 'Fear of dogs'},
-      {question: 'How many languages are written from right to left?', answer: '12'},
-      {question: 'Who was the first woman to win a Nobel Prize (in 1903)?', answer: 'Marie Curie'}
-
-    ]
-
-    function next() {
-      questionNumber += 1;
-      document.getElementById("question").innerHTML = questions[questionNumber].question;
-      document.getElementById("answer").innerHTML = '';
-      document.getElementById("questionNumber").innerHTML = questionNumber+1;
-
-    };
-    function showAnswer() {
-      document.getElementById("answer").innerHTML = questions[questionNumber].answer;
-    };
-    </script>
-
-    <div class="container">
-      <div class="card">
-        <p class="questionNumber"><a id="questionNumber">1</a>/5</p>
-        <h1 id="question">What does www stand for in a website browser?</h1>
-        <p id="answer"></p>
-        <button id="showAnswer" onclick="showAnswer()">Show Answer</button>
-        <button id="next" onclick="next()">Next</button>
-      </div>
+    <nav class="menu" id="menu">
+        <iframe class="radio" src="https://www.youtube.com/embed/H1YUIjZr1fA?autoplay=1" frameborder="0" allow="autoplay"></iframe>
+        <div id="radio-margin-down"></div>
+        <div id="radio-margin-up"></div>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Anéis</a>
+                <ul>
+                    <li><a href="#">Personalizados</a>
+                        <ul>
+                            <li><a href="#">Ouro</a></li>
+                            <li><a href="#">Prata</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Formatura</a>
+                        <ul>
+                            <li><a href="#">Ouro</a></li>
+                            <li><a href="#">Prata</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Alianças</a>
+                        <ul>
+                            <li><a href="#">Ouro</a></li>
+                            <li><a href="#">Prata</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="cord"><a href="#">Cordões</a>
+                <ul>
+                    <li><a href="#">Ouro</a></li>
+                    <li><a href="#">Prata</a></li>
+                </ul>
+            </li>
+            <li><a href="https://phourives.pythonanywhere.com/#link-contato">Contatos</a></li>
+        </ul>
+    </nav>
+    <!--
+            <div class="icon-logo">
+                <a hrel="#about"><img src="https://i.ibb.co/D9JFMWf/PHICON-3-256px.png"></a>
+            </div>
+     -->
+    <div class="banner">
+        <a href="https://phourives.pythonanywhere.com/#link-galeria"><img src="https://i.ibb.co/18NsTHk/arrow-down256px.png"></a>
     </div>
-  </body>
+    <div class="objetivo">
+        <p>Fabricação própria de alianças de prata e ouro, anéis de formatura, pinjentes, anéis personalizados, cordões, brincos e consertos de jóias em geral.</p>
+    </div>
+    <div class="galeria" id="link-galeria">
 
+        <p>Populares</p>
+        <div class="Modelos" align="center">
+            <div><figure><img src="https://i.ibb.co/KGvxy84/06.jpg"></figure><div><a>#PH1988</a></div></div>
+            <div><figure><img src="https://i.ibb.co/ccMr1VJ/03.jpg"></figure><div><a>#PH1988</a></div></div>
+            <div><figure><img src="https://i.ibb.co/3vfPM65/02.jpg"></figure><div><a>#PH1988</a></div></div>
+            <div><figure><img src="https://i.ibb.co/z4TrXK4/14.jpg"></figure><div><a>#PH1988</a></div></div>
+        </div>
+
+    </div>
+    <div class="space_1"></div>
+    <div class="sobre">
+            <p class="title-sobre"> Sobre </p>
+            <p>Comecei a aprender a profissão de ourives com 16 anos, desde então já faz 30 anos que estou me aperfeiçoando nessa área.</p>
+    </div>
+    <div class="space_2"></div>
+    <div class="contato" id="link-contato">
+        <div class="redes">
+            <a class="facebook" href="https://www.facebook.com/PH-Ourives-107611180909326">
+                <img src="https://i.ibb.co/dpk5tsp/white-facebook-logo-512px.png">
+            </a>
+        </div>
+
+        <info>
+            <p>CONTATOS</p>
+            <div class="contato-info">
+                <p>phourives@outlook.com</p>
+                <p>(12) 99142-3722</p>
+            </div>
+        </info>
+    </div>
+    <div class="rodape"><a>por PH Ourives, 2020</a></div>
+
+    <script type="text/javascript">
+        var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollpos = window.pageYOffset;
+            if(prevScrollpos > currentScrollpos) {
+                document.getElementById("menu").style.top = "0";
+            } else {
+                document.getElementById("menu").style.top = "-150px";
+            }
+            prevScrollpos = currentScrollpos;
+        }
+    </script>
+</body>
 </html>
+
